@@ -92,11 +92,11 @@ function init() {
       // Reverse the array due to Plotly's defaults
       
         
-      var yticks = chosen_sample.otu_ids.slice(0, 10).reverse();
+      var yticks = otu_ids.slice(0, 10).reverse();
   
       // 8. Create the trace for the bar chart. 
       var barData = [
-        {x : chosen_sample.sample_values.slice(0, 10).reverse(),
+        {x : sample_values.slice(0, 10).reverse(),
         y : yticks,
         type:"bar",
         orientation: "h"
