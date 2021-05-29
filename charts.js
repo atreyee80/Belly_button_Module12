@@ -65,6 +65,8 @@ function init() {
   
       // 4. Create a variable that filters the samples for the object with the desired sample number.
       var new_sample = samples.filter(object=>object.id===sample);
+      //var new_sample_metadata = data.metadata.filter(object=>object.id===sample);
+      //var metadata = new_sample_metadata[0];
       console.log(new_sample);
   
       //  5. Create a variable that holds the first sample in the array.
@@ -79,7 +81,8 @@ function init() {
 
       // create a variable that converts the washing frequency to a floating point number.
       console.log(metadata);
-      var washing_frequency = metadata.map(m => parseFloat(m.wfreq))
+      var washing_frequency = metadata.map(m => parseFloat(m.wfreq));
+      //var washing_frequency =  parseFloat(metadata.wfreq);
       console.log(washing_frequency);
       
   
@@ -112,6 +115,7 @@ function init() {
         orientation: "h"
     }
  ];
+ console.log(sample_values);
       // 9. Create the layout for the bar chart. 
       var barLayout = {
         title: "Top 10 Bacteria Cultures Found",
@@ -151,18 +155,19 @@ function init() {
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
       {
-        
+        domain: { x: [0, 1], y: [0, 1] },
         value: washing_frequency,
         title: { text: "Belly Button Washing Frequency" },
         type: "indicator",
         mode: "gauge+number",
         gauge: {
           axis: { range: [null, 10] },
+          bar:{color:"black"},
           steps: [
             { range: [0, 2], color: "red" },
             { range: [2, 4], color: "orange" },
             { range: [4, 6], color: "yellow" },
-            { range: [6, 8], color: "light green" },
+            { range: [6, 8], color: "lightgreen" },
             { range: [8,10], color: "green" },
 
           ],
@@ -179,8 +184,7 @@ function init() {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      title: "Belly Button Washing Frequency",
-      margin: {t:30,l:150},
+      width: 600, height: 450, margin: { t: 0, b: 0 }
       
      
     };
