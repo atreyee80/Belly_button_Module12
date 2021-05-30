@@ -7,11 +7,11 @@ a guage chart showing their washing frequency and a bubble chart of the bacteria
 ## Resources:
 Data Sources provided to analyze and minipulate included the samples.json file as well as utilizing the following software and applications:
 
-JavaScript
-HTML
-CSS
-Visual Studio
-Personal GitHub account
+# JavaScript
+# HTML
+# CSS
+# Visual Studio
+# Personal GitHub account
 ## Analysis and Workflow
 Deliverable 1: Create a Horizontal Bar Chart
 Deliverable 2: Create a Bubble Chart
