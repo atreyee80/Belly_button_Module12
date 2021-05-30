@@ -12,11 +12,11 @@ Data Sources provided to analyze and minipulate included the samples.json file a
 ### CSS
 ### Visual Studio
 ### Personal GitHub account
-### Analysis and Workflow
-Deliverable 1: Create a Horizontal Bar Chart
-Deliverable 2: Create a Bubble Chart
-Deliverable 3: Create a Gauge Chart 
-Deliverable 4: Customize the Dashboard
+## Analysis and Workflow
+### Deliverable 1: Create a Horizontal Bar Chart
+### Deliverable 2: Create a Bubble Chart
+### Deliverable 3: Create a Gauge Chart 
+### Deliverable 4: Customize the Dashboard
 ## Results
 ![](Bacteria_bellybutton1.png?raw=true)
 ![](Bacteria_bellybutton2.png?raw=true)
