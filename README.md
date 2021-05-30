@@ -18,5 +18,7 @@ Deliverable 2: Create a Bubble Chart
 Deliverable 3: Create a Gauge Chart 
 Deliverable 4: Customize the Dashboard
 ## Results
+![](Bacteria_bellybutton1.png?raw=true)
+![](Bacteria_bellybutton2.png?raw=true)
 
 
