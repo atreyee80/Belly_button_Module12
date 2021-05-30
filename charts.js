@@ -156,7 +156,7 @@ function init() {
       {
         domain: { x: [0, 1], y: [0, 1] },
         value: washing_frequency,
-        title: { text: "Belly Button Washing Frequency <br> Scrubs Per Week" },
+        //title: { text: "Belly Button Washing Frequency <br> Scrubs Per Week" },
         type: "indicator",
         mode: "gauge+number",
         gauge: {
@@ -183,7 +183,12 @@ function init() {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 600, height: 450, margin: { t: 0, b: 0 }
+      //width: 600, height: 450, margin: { t: 0, b: 0 }
+      title: { text: "Belly Button Washing Frequency <br> Scrubs Per Week"},
+      width: 500,
+      height: 400,
+      plot_bgcolor: '#F0F8FF',
+      paper_bgcolor: '#F0F8FF',
       
      
     };
