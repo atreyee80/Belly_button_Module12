@@ -59,16 +59,17 @@ function init() {
     d3.json("samples.json").then((data) => {
       // 3. Create a variable that holds the samples array. 
       var samples = data.samples;
-      var metadata = data.metadata;
+      //var metadata = data.metadata;
       console.log(samples);
       console.log(data);
   
       // 4. Create a variable that filters the samples for the object with the desired sample number.
       var new_sample = samples.filter(object=>object.id===sample);
-      //var new_sample_metadata = data.metadata.filter(object=>object.id===sample);
-      //var metadata = new_sample_metadata[0];
-      console.log(new_sample);
-  
+      var new_sample_metadata = data.metadata.filter(object=>object.id==sample);
+      console.log(new_sample_metadata);
+      var metadata = new_sample_metadata[0];
+      //console.log(new_sample);
+      //metadata = new_sample.metadata[0];
       //  5. Create a variable that holds the first sample in the array.
       var chosen_sample = new_sample[0];
       console.log(chosen_sample);
@@ -81,8 +82,9 @@ function init() {
 
       // create a variable that converts the washing frequency to a floating point number.
       console.log(metadata);
-      var washing_frequency = metadata.map(m => parseFloat(m.wfreq));
-      //var washing_frequency =  parseFloat(metadata.wfreq);
+      //var washing_frequency = metadata.map(m => parseFloat(m.wfreq));
+      
+      var washing_frequency =  parseFloat(metadata.wfreq);
       console.log(washing_frequency);
       
   
@@ -90,10 +92,8 @@ function init() {
       // 7. Create the yticks for the bar chart.
       // Hint: Get the the top 10 otu_ids and map them in descending order  
       //  so the otu_ids with the most bacteria are last. 
-      //chosen_sample.sample_values.sort(function(a, b) {
-        //return parseFloat(b) - parseFloat(a);
-     
       
+    
       // Slice the first 10 objects for plotting
       //chosen_sample.sample_values = chosen_sample.sample_values.slice(0, 10).reverse();
       //chosen_sample.otu_labels = chosen_sample.otu_labels.slice(0, 10).reverse();
@@ -103,13 +103,11 @@ function init() {
       
         
       var yticks = otu_ids.slice(0, 10).map(otu =>`otu${otu}`).reverse();
-      //console.log(yticks);
-      //console.log(sample_values.slice(0, 10).reverse())
-  
+      
       // 8. Create the trace for the bar chart. 
       var barData = [
         {
-       y : yticks,
+        y : yticks,
         x : sample_values.slice(0, 10).reverse(),
         type:"bar",
         orientation: "h"
@@ -153,11 +151,12 @@ function init() {
     Plotly.newPlot("bubble",bubbleData,bubbleLayout); 
     //-----------Gauge chart-------
     // 4. Create the trace for the gauge chart.
+    console.log(washing_frequency);
     var gaugeData = [
       {
         domain: { x: [0, 1], y: [0, 1] },
         value: washing_frequency,
-        title: { text: "Belly Button Washing Frequency" },
+        title: { text: "Belly Button Washing Frequency <br> Scrubs Per Week" },
         type: "indicator",
         mode: "gauge+number",
         gauge: {
