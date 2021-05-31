@@ -18,6 +18,7 @@ Data Sources provided to analyze and minipulate included the samples.json file a
 ### Deliverable 3: Create a Gauge Chart 
 ### Deliverable 4: Customize the Dashboard
 ## Results
+
 ![](Bacteria_bellybutton1.png?raw=true)
 
 ![](Bacteria_bellybutton2.png?raw=true)
