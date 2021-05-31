@@ -20,11 +20,16 @@
       </div>
       <div class="col-md-12 text-center">
         <p>
-          There are three different charts that offer insights into each participant's samples. The chart 
-          on the top left looks at the top 10 bacterias found within the participant's belly button. The chart
-          on the top right looks at the amount of times a week a participant scrubs their belly button. The 
-          chart on the bottom compares all of the different bacterias found in the participant's belly button 
+          There are three different charts that offer insights into each participant's samples.
+          The chart on the top left is a bar chart that looks at the top 10 bacterias found within the participant's belly button. 
+          
+          The horizontal bar chart will display the sample_values as the values, the otu_ids as the labels,
+          and the otu_labels as the hover text for the bars on the chart.
+
+          The chart on the top right is a gauge chart that looks at the amount of times a week a participant scrubs their belly button.
+          The chart on the bottom is a bubble cahrt that compares all of the different bacterias found in the participant's belly button 
           based on sample size. 
+           
         </p>
       </div>
     </div>
@@ -43,15 +48,22 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        <div id="bar">  
+        </div>
+        <p>The chart on the top left looks at the top 10 bacterias found within the participant's belly button.</p>
       </div>
       <div class="col-md-5">
         <div id="gauge"></div>
+        <p>The chart on the top right looks at the amount of times a week a participant scrubs their belly button.</p>
+          
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div id="bubble"></div>
+        <p>The chart on the bottom compares all of the different bacterias found in the participant's belly button 
+          based on sample size. </p>
+          
       </div>
     </div>
   </div>
